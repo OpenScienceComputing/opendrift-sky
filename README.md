@@ -36,7 +36,7 @@ Then we can run a simulation like this:
 ```
 sky exec opendrift-rsignell --env AWS_SECRET_ACCESS_KEY={OSN_SECRET_ACCESS_KEY} --env AWS_ACCESS_KEY_ID={OSN_ACCESS_KEY_ID} opendrift_sky.yaml
 ```
-The resulting NetCDF files show up on OSN here:
+The resulting output NetCDF files show up on OSN here:
 ```
 aws s3 ls s3://rsignellbucket2/rsignell/CNAPS/output/ --no-sign-request --endpoint-url=https://renc.osn.xsede.org
 ```
