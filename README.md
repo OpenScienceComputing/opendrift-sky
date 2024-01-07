@@ -22,7 +22,12 @@ sky check # should come back with `Kubernetes:enabled`
 sky launch -c opendrift-rsignell opendrift_sky.yaml
 ```
 #### Run an Opendrift simulation
-make sure to export OSN_SECRET_ACCESS_KEY and OSN_ACCESS_KEY_ID, setting the to the OSN S3 keys so Sky can write to OSN object storage
+If we export environment variables providing credentials to OSN like this:
+```
+export OSN_SECRET_ACCESS_KEY=xxxxxxxx
+export OSN_ACCESS_KEY_ID=xxxxxxxxx
+```
+Then we can run a simulation like this:
 ```
 sky exec opendrift-rsignell --env AWS_SECRET_ACCESS_KEY={OSN_SECRET_ACCESS_KEY} --env AWS_ACCESS_KEY_ID={OSN_ACCESS_KEY_ID} opendrift_sky.yaml
 ```
