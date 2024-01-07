@@ -1,5 +1,6 @@
 # opendrift-sky
-SkyPilot files for running OpenDrift
+[SkyPilot](https://skypilot.readthedocs.io/) is a package that allows running batch jobs on pretty much any Cloud resources.   Here are SkyPilot files for running OpenDrift on a Kubernetes Cluster that was deployed by Nebari](https://nebari.dev).  Nebari pods run in the `dev` namespace, and Sky pods run in the `default` namespace. 
+
 #### Install skypilot 
 ```
 mkdir sky
