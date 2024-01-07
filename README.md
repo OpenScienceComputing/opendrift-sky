@@ -26,3 +26,7 @@ make sure to export OSN_SECRET_ACCESS_KEY and OSN_ACCESS_KEY_ID, setting the to 
 ```
 sky exec opendrift-rsignell --env AWS_SECRET_ACCESS_KEY={OSN_SECRET_ACCESS_KEY} --env AWS_ACCESS_KEY_ID={OSN_ACCESS_KEY_ID} opendrift_sky.yaml
 ```
+The resulting NetCDF files show up on OSN here:
+```
+aws s3 ls s3://rsignellbucket2/rsignell/CNAPS/output/ --no-sign-request --endpoint-url=https://renc.osn.xsede.org
+```
