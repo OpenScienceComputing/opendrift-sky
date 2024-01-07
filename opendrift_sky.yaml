@@ -1,0 +1,24 @@
+resources:
+  # Optional; if left out, automatically pick the cheapest cloud.
+  cloud: kubernetes
+  cpus: 2+
+  memory: 8+
+# Working directory (optional) containing the project codebase.
+# Its contents are synced to ~/sky_workdir/ on the cluster.
+workdir: .
+
+# Typical use: pip install -r requirements.txt
+# Invoked under the workdir (i.e., can use its files).
+setup: |
+  conda config --append envs_dirs .
+  conda config --add channels conda-forge
+  conda create -n mamba mamba -y
+  conda activate mamba
+  mamba env create -f odrift-dev_env.yml
+
+# Typical use: make use of resources, such as running training.
+# Invoked under the workdir (i.e., can use its files).
+run: |
+  conda activate odrift-dev
+  python drift_comp.py 
+  conda env list
