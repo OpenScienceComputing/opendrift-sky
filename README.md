@@ -3,6 +3,8 @@
 
 Here are the SkyPilot files I used for running OpenDrift on a Kubernetes Cluster that was deployed by [Nebari](https://nebari.dev).  Nebari pods run in the `dev` namespace, and Sky pods run in the `default` namespace. 
 
+The OpenDrift simulation here runs 10 particles for 28 days using data from a ROMS model accessible through an Intake Catalog.  The results are saved to an Open Storage Network Pod, which provides access via s3 with no egress fees (and no credentials)
+
 #### Install skypilot 
 ```
 mkdir sky
