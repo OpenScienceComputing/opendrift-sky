@@ -4,8 +4,8 @@ SkyPilot files for running OpenDrift
 ```
 mkdir sky
 cd sky
-mamba create -y -n sky python=3.10
-mamba activate sky
+conda create -y -n sky python=3.10
+conda activate sky
 pip install "skypilot-nightly[aws]"
 ```
 #### Create sky cluster
