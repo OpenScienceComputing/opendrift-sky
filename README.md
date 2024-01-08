@@ -5,7 +5,7 @@ Here are the SkyPilot files I used for running OpenDrift on a Kubernetes Cluster
 
 The OpenDrift simulation here runs 10 particles for 28 days using data from a ROMS ocean model accessible through an Intake Catalog.  The results are saved to an Open Storage Network Pod, which provides access via s3 with no egress fees (and no credentials)
 
-The goal is to be able to run hundreds of these simulations at once, which would allow stastics to be calculated on how larval transport varies from month to month (e.g. oyster larvae in Chesapeake Bay, for example). 
+The goal is to be able to run hundreds of these simulations at once, which would allow stastics to be calculated on how larval transport varies from month to month (e.g. oyster larvae in Chesapeake Bay, for example).  Can we use the autoscaling capability of the existing cluster to handle this?
 
 #### Install skypilot 
 ```
